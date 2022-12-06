@@ -117,6 +117,8 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
   winSound: {fileID: 0}
   loseSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 84be9e7d59673fe4ea53061960ab6290, type: 3}
+  speedSound: {fileID: 8300000, guid: 2aa8f9b5b18245349b9d77376bda12b5, type: 3}
   timeInvincible: 2
   hitEffect: {fileID: 6303636742894449909}
   healthEffect: {fileID: 6901685299953260145}

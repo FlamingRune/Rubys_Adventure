@@ -39,5 +39,11 @@ public class Projectile : MonoBehaviour
     }
     
     
+    
+    EnemyHardestController e3 = other.collider.GetComponent<EnemyHardestController>();
+    if (e3 !=null)
+    {
+        e3.ChangeHealth(1);
+    }
     }
 }

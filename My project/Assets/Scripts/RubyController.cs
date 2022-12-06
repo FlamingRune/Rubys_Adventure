@@ -29,6 +29,8 @@ public class RubyController : MonoBehaviour
     public AudioClip hitSound;
     public AudioClip winSound;
     public AudioClip loseSound;
+    public AudioClip pickupSound;
+    public AudioClip speedSound;
 
 
     
@@ -131,7 +133,7 @@ public class RubyController : MonoBehaviour
         }  
         cogsText.text = "Cogs: " + cogs.ToString();
         scoreText.text = "Score: " + score.ToString();
-        if (score == 8)
+        if (score == 10)
         {
             winText.SetActive(true);
             speed = 0f;
@@ -216,7 +218,17 @@ public class RubyController : MonoBehaviour
        if (collision.collider.tag == "Cog")
         {
             cogs = cogs + 4;
+
+            PlaySound(pickupSound);
             
+            Destroy(collision.collider.gameObject);
+        }
+        if (collision.collider.tag == "Speed")
+        {
+            speed = 5.0f;
+
+            PlaySound(speedSound);
+
             Destroy(collision.collider.gameObject);
         }
     }
